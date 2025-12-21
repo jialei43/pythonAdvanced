@@ -36,5 +36,8 @@ class Student(object):
 
 
 s = Student('zhangsan', 26, 10086, 90)
-print(f'{s.getname}')
-print(s.getProperties())
+if __name__ == '__main__':
+
+    print(f'{s.getname}')
+    print(s.getProperties())
+
