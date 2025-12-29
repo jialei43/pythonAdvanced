@@ -17,17 +17,28 @@ class singlelinklist():
 
     def __init__(self, node=None):
         self.head = node
-        # 维护尾部指针
+        # 维护尾部元素，便于尾部插入时使用，不用遍历获取尾部元素进行插入，提升性能
         self.tail = None
-
+        # 当前索引要插入位置对应的元素
+        self.pos_item = None
+        # 当前索引要插入位置建一个节点对应的元素
+        self.previous_pos_item = None
 
     def isEmpty(self):
+        '''
+        判断是否为空
+        :return: bool
+        '''
         if self.head == None:
             return True
         else:
             return False
 
     def getListLength(self):
+        """
+        获取列表的长度
+        :return: int
+        """
         length = 0
         if self.isEmpty():
             return 0
@@ -37,20 +48,26 @@ class singlelinklist():
             cur = cur.next
         return length
 
-    def append(self, *args,flag=1)->None:
+    def append(self, *args, flag=1, pos=1) -> None:
         '''
-        通用链表插入，支持从头部和尾部进行插入，支持单个元素及可迭代容器批量插入
+        通用链表插入，支持从头部和尾部及指定位置进行插入，支持单个元素及可迭代容器批量插入
         :param args:
-        :param flag: 0-头部 1-尾部 默认是1-尾部
+        :param flag: 0-头部 1-尾部 2-指定位置进行插入  默认是1-尾部
+        :param pos 指定的位置 pos = 1 默认是尾部
         :return:
         '''
+        # 若插入的是容易，那么pos没插入一条数据，就需要自增一
+        index = pos
         for item in args:
             if isinstance(item, Iterable) and not isinstance(item, (str, bytes)):
                 for data in item:
-                    if flag ==1:
+                    if flag == 1:
                         self._append_one(data)
-                    elif flag ==0:
+                    elif flag == 0:
                         self._add_head_one(data)
+                    elif flag == 2:
+                        self._insert_one_by_index(data, index)
+                        index += 1
 
 
             else:
@@ -58,6 +75,13 @@ class singlelinklist():
                     self._append_one(item)
                 elif flag == 0:
                     self._add_head_one(item)
+                elif flag == 2:
+                    self._insert_one_by_index(item, pos)
+        # 循环结束后，清空self.pos_item，elf.previous_pos_item
+        # 当前索引要插入位置对应的元素
+        self.pos_item = None
+        # 当前索引要插入位置建一个节点对应的元素
+        self.previous_pos_item = None
 
     def _append_one(self, data):
         node = SingleNode(data)
@@ -72,7 +96,7 @@ class singlelinklist():
                 while cur != None:
                     last_item = cur
                     cur = cur.next
-                self.tail=last_item
+                self.tail = last_item
             self.tail.next = node
             self.tail = node
 
@@ -88,9 +112,9 @@ class singlelinklist():
             # 新节点的next节点指向以前的head节点
             new_node.next = cur
 
-    def add_item_to_head(self,*args):
+    def add_item_to_head(self, *args):
         for arg in args[0]:
-            new_node =SingleNode(arg)
+            new_node = SingleNode(arg)
             if self.isEmpty():
                 self.head = new_node
             else:
@@ -102,42 +126,61 @@ class singlelinklist():
                 new_node.next = cur
         print('所有元素添加完毕')
 
-    # 在指定节点进行数据插入
-    def universal_insert_by_index(self,*args,pos):
-        '''
-
-        :param args:
-        :param pos:
-        :return:
-        '''
-        for item in args:
-            if isinstance(item, Iterable) and not isinstance(item, (str, bytes)):
-                for data in item:
-                    self._insert_one_by_index(data,pos)
-            else:
-                self._insert_one_by_index(data,pos)
-    def _insert_one_by_index(self,data):
+    def _insert_one_by_index(self, data, pos):
         length = self.getListLength()
-        # if
+        # 记录当前元素的索引
+        index = 0
+        node = SingleNode(data)
+        if pos <= 0:
+            self._add_head_one(data)
+        if pos >= length:
+            self._append_one(data)
+        else:
+            if self.pos_item is not None and self.previous_pos_item is not None:
+                self.previous_pos_item.next = node
+                node.next = self.pos_item
+                # 插入完成后更新前一个节点和当前节点
+                self.previous_pos_item = node
+                # 由于每次插入一个元素，这个元素后面的元素都会往后位移一位，索引当前索引的元素一直不变就不再赋值了
+                # self.pos_item = cur
+
+            else:
+                cur = self.head
+                self.previous_pos_item = None
+                while cur is not None:
+                    if cur.next is not None:
+                        self.previous_pos_item = cur
+                        cur = cur.next
+                        index += 1
+                    if index == pos:
+                        break
+                self.previous_pos_item.next = node
+                node.next = cur
+                # 插入完成后更新前一个节点和当前节点
+                self.previous_pos_item = node
+                self.pos_item = cur
 
     def getlist(self):
         if not self.isEmpty():
             cur = self.head
             while cur != None:
                 print(cur.item)
-                cur=cur.next
-
+                cur = cur.next
 
 
 if __name__ == '__main__':
     single_list = singlelinklist()
-    list = [e for e in range(100)]
+    my_list = [e for e in range(100)]
     # single_list.add_item_to_head(list)
-    single_list.append(list,flag=0)
+    single_list.append(my_list, flag=0)
     # single_list.getlist()
     print('==' * 34)
-    single_list.append([e for e in range(100,200)],[e for e in range(200,300)])
+    single_list.append([e for e in range(100, 200)], [e for e in range(200, 300)])
     single_list.append(300)
+    # single_list.getlist()
+    print('==' * 34)
+    single_list.append([e for e in range(500, 600)], [e for e in range(600, 700)], flag=2, pos=100)
+    single_list.append(701, flag=2, pos=100)
     single_list.getlist()
     print('==' * 34)
     is_empty = single_list.isEmpty()

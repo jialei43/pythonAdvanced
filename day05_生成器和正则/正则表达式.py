@@ -71,5 +71,67 @@ print(re.findall(r"[^0-9]", "a1b2"))
 """
 边界控制（非常重要）
 """
+# ^ 匹配字符串的开头。
 print(re.findall(r'^abc', "abc123 abc"))
+
+# 匹配账号，只能由数字和字母租场，长度是6-10
+r = '^[0-9a-zA-Z]{6,10}$'
+print(re.findall(r, "123124235355436"))
+print(re.findall(r, "abc12345"))
+"""
+第二个 "abc"：虽然它的内容也是 "abc"，但它位于字符串的中间（前面有空格和 xyz）。因为它不在字符串的“开头”，所以不符合 ^ 的限制条件。
+"""
+result = re.findall(r"^abc", "abcxyz abc")
+print(result)  # 输出: ['abc']
+
+# $ 匹配字符串的结尾。
+"""
+第一个 "xyz"：它出现在字符串中间（后面跟着空格和 def...）。对于正则表达式引擎来说，这里不是字符串的终点，因此不满足 $ 的条件。
+"""
+result = re.findall(r"xyz$", "abcxyz defxyz")
+print(result)  # 输出: ['xyz']
+
+
+# \b：单词边界
+#
+# 定义：\b 匹配一个单词的边界，他匹配的是一个独立的单词，左右都没有元素相邻。
+
+result = re.findall(r"\bword\b", "word the word is here")
+print(result)  # 输出: ['word', 'word']
+
+# \B：非单词边界 位于一个字符串的中间，左右俩边都有字符
+#
+# 定义：\B 匹配非单词边界。
+result = re.findall(r"\Bword\B", "sword worded")
+print(result)  # 输出: []
+
+# "word" 左右都被字母包围了
+text = "passworded"
+result = re.findall(r"\Bword\B", text)
+
+print(result)  # 输出: ['word']
+
+"""
+6分组与捕获
+"""
+result = re.findall(r"(\d+)-(\d+)", "123-456 789-012")
+print(result)  # 输出: [('123', '456'), ('789', '012')]
+
+
+
+
+"""
+案例
+"""
+# 匹配qq号，要求都是数字，长度5-11，第一位不为0
+r = '^[1-9][0-9]{4,10}$'
+s = '11234567899'
+print(re.findall(r, s))
+
+# 匹配邮箱地址，只允许 qq，163，gmail  \w只匹配数字，字母、下划线，所以还带加上-
+r = '^[\w-]+(\.[\w-]+)*@(qq|163|gmail)(\.[\w-]+)+$'
+s = "jia.lei1234@163.cloud"
+print(re.findall(r, s))
+print(re.match(r, s))
+
 
