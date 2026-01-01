@@ -1,0 +1,468 @@
+2025-12-31 23:36:29,134 | INFO | 开始抓取得物鞋子数据...
+2025-12-31 23:36:29,877 | ERROR | 第1页出错：Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "D:\Users\Administrator\anaconda3\envs\simple\lib\site-packages\requests\models.py", line 976, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "D:\Users\Administrator\anaconda3\envs\simple\lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "D:\Users\Administrator\anaconda3\envs\simple\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "D:\Users\Administrator\anaconda3\envs\simple\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "G:\新建文件夹\pythonAdvanced\接单\爬取得物鞋子详情页信息.py", line 131, in main
+    items = search_shoes(page)        # 拿到当前页 40 条
+  File "G:\新建文件夹\pythonAdvanced\接单\爬取得物鞋子详情页信息.py", line 81, in search_shoes
+    data = resp.json()                                       # 转 JSON
+  File "D:\Users\Administrator\anaconda3\envs\simple\lib\site-packages\requests\models.py", line 980, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2025-12-31 23:36:39,517 | ERROR | 第2页出错：Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "D:\Users\Administrator\anaconda3\envs\simple\lib\site-packages\requests\models.py", line 976, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "D:\Users\Administrator\anaconda3\envs\simple\lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "D:\Users\Administrator\anaconda3\envs\simple\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "D:\Users\Administrator\anaconda3\envs\simple\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "G:\新建文件夹\pythonAdvanced\接单\爬取得物鞋子详情页信息.py", line 131, in main
+    items = search_shoes(page)        # 拿到当前页 40 条
+  File "G:\新建文件夹\pythonAdvanced\接单\爬取得物鞋子详情页信息.py", line 81, in search_shoes
+    data = resp.json()                                       # 转 JSON
+  File "D:\Users\Administrator\anaconda3\envs\simple\lib\site-packages\requests\models.py", line 980, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2025-12-31 23:36:45,129 | ERROR | 第3页出错：Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "D:\Users\Administrator\anaconda3\envs\simple\lib\site-packages\requests\models.py", line 976, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "D:\Users\Administrator\anaconda3\envs\simple\lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "D:\Users\Administrator\anaconda3\envs\simple\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "D:\Users\Administrator\anaconda3\envs\simple\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "G:\新建文件夹\pythonAdvanced\接单\爬取得物鞋子详情页信息.py", line 131, in main
+    items = search_shoes(page)        # 拿到当前页 40 条
+  File "G:\新建文件夹\pythonAdvanced\接单\爬取得物鞋子详情页信息.py", line 81, in search_shoes
+    data = resp.json()                                       # 转 JSON
+  File "D:\Users\Administrator\anaconda3\envs\simple\lib\site-packages\requests\models.py", line 980, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2025-12-31 23:36:52,426 | ERROR | 第4页出错：Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "D:\Users\Administrator\anaconda3\envs\simple\lib\site-packages\requests\models.py", line 976, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "D:\Users\Administrator\anaconda3\envs\simple\lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "D:\Users\Administrator\anaconda3\envs\simple\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "D:\Users\Administrator\anaconda3\envs\simple\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "G:\新建文件夹\pythonAdvanced\接单\爬取得物鞋子详情页信息.py", line 131, in main
+    items = search_shoes(page)        # 拿到当前页 40 条
+  File "G:\新建文件夹\pythonAdvanced\接单\爬取得物鞋子详情页信息.py", line 81, in search_shoes
+    data = resp.json()                                       # 转 JSON
+  File "D:\Users\Administrator\anaconda3\envs\simple\lib\site-packages\requests\models.py", line 980, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2025-12-31 23:37:00,608 | ERROR | 第5页出错：Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "D:\Users\Administrator\anaconda3\envs\simple\lib\site-packages\requests\models.py", line 976, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "D:\Users\Administrator\anaconda3\envs\simple\lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "D:\Users\Administrator\anaconda3\envs\simple\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "D:\Users\Administrator\anaconda3\envs\simple\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "G:\新建文件夹\pythonAdvanced\接单\爬取得物鞋子详情页信息.py", line 131, in main
+    items = search_shoes(page)        # 拿到当前页 40 条
+  File "G:\新建文件夹\pythonAdvanced\接单\爬取得物鞋子详情页信息.py", line 81, in search_shoes
+    data = resp.json()                                       # 转 JSON
+  File "D:\Users\Administrator\anaconda3\envs\simple\lib\site-packages\requests\models.py", line 980, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2025-12-31 23:37:08,411 | ERROR | 第6页出错：Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "D:\Users\Administrator\anaconda3\envs\simple\lib\site-packages\requests\models.py", line 976, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "D:\Users\Administrator\anaconda3\envs\simple\lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "D:\Users\Administrator\anaconda3\envs\simple\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "D:\Users\Administrator\anaconda3\envs\simple\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "G:\新建文件夹\pythonAdvanced\接单\爬取得物鞋子详情页信息.py", line 131, in main
+    items = search_shoes(page)        # 拿到当前页 40 条
+  File "G:\新建文件夹\pythonAdvanced\接单\爬取得物鞋子详情页信息.py", line 81, in search_shoes
+    data = resp.json()                                       # 转 JSON
+  File "D:\Users\Administrator\anaconda3\envs\simple\lib\site-packages\requests\models.py", line 980, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2025-12-31 23:37:15,259 | ERROR | 第7页出错：Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "D:\Users\Administrator\anaconda3\envs\simple\lib\site-packages\requests\models.py", line 976, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "D:\Users\Administrator\anaconda3\envs\simple\lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "D:\Users\Administrator\anaconda3\envs\simple\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "D:\Users\Administrator\anaconda3\envs\simple\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "G:\新建文件夹\pythonAdvanced\接单\爬取得物鞋子详情页信息.py", line 131, in main
+    items = search_shoes(page)        # 拿到当前页 40 条
+  File "G:\新建文件夹\pythonAdvanced\接单\爬取得物鞋子详情页信息.py", line 81, in search_shoes
+    data = resp.json()                                       # 转 JSON
+  File "D:\Users\Administrator\anaconda3\envs\simple\lib\site-packages\requests\models.py", line 980, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2025-12-31 23:37:22,717 | ERROR | 第8页出错：Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "D:\Users\Administrator\anaconda3\envs\simple\lib\site-packages\requests\models.py", line 976, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "D:\Users\Administrator\anaconda3\envs\simple\lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "D:\Users\Administrator\anaconda3\envs\simple\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "D:\Users\Administrator\anaconda3\envs\simple\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "G:\新建文件夹\pythonAdvanced\接单\爬取得物鞋子详情页信息.py", line 131, in main
+    items = search_shoes(page)        # 拿到当前页 40 条
+  File "G:\新建文件夹\pythonAdvanced\接单\爬取得物鞋子详情页信息.py", line 81, in search_shoes
+    data = resp.json()                                       # 转 JSON
+  File "D:\Users\Administrator\anaconda3\envs\simple\lib\site-packages\requests\models.py", line 980, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2025-12-31 23:37:31,013 | ERROR | 第9页出错：Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "D:\Users\Administrator\anaconda3\envs\simple\lib\site-packages\requests\models.py", line 976, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "D:\Users\Administrator\anaconda3\envs\simple\lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "D:\Users\Administrator\anaconda3\envs\simple\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "D:\Users\Administrator\anaconda3\envs\simple\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "G:\新建文件夹\pythonAdvanced\接单\爬取得物鞋子详情页信息.py", line 131, in main
+    items = search_shoes(page)        # 拿到当前页 40 条
+  File "G:\新建文件夹\pythonAdvanced\接单\爬取得物鞋子详情页信息.py", line 81, in search_shoes
+    data = resp.json()                                       # 转 JSON
+  File "D:\Users\Administrator\anaconda3\envs\simple\lib\site-packages\requests\models.py", line 980, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2025-12-31 23:37:36,709 | ERROR | 第10页出错：Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "D:\Users\Administrator\anaconda3\envs\simple\lib\site-packages\requests\models.py", line 976, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "D:\Users\Administrator\anaconda3\envs\simple\lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "D:\Users\Administrator\anaconda3\envs\simple\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "D:\Users\Administrator\anaconda3\envs\simple\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "G:\新建文件夹\pythonAdvanced\接单\爬取得物鞋子详情页信息.py", line 131, in main
+    items = search_shoes(page)        # 拿到当前页 40 条
+  File "G:\新建文件夹\pythonAdvanced\接单\爬取得物鞋子详情页信息.py", line 81, in search_shoes
+    data = resp.json()                                       # 转 JSON
+  File "D:\Users\Administrator\anaconda3\envs\simple\lib\site-packages\requests\models.py", line 980, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2025-12-31 23:37:43,329 | INFO | 全部完成！已抓 0 双鞋，见 dewu_shoes.csv
+2025-12-31 23:42:20,423 | INFO | 开始抓取得物鞋子数据...
+2025-12-31 23:45:16,727 | ERROR | 第1页出错：Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "D:\Users\Administrator\anaconda3\envs\simple\lib\site-packages\requests\models.py", line 976, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "D:\Users\Administrator\anaconda3\envs\simple\lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "D:\Users\Administrator\anaconda3\envs\simple\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "D:\Users\Administrator\anaconda3\envs\simple\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "G:\新建文件夹\pythonAdvanced\接单\爬取得物鞋子详情页信息.py", line 131, in main
+    items = search_shoes(page)        # 拿到当前页 40 条
+  File "G:\新建文件夹\pythonAdvanced\接单\爬取得物鞋子详情页信息.py", line 81, in search_shoes
+    data = resp.json()                                       # 转 JSON
+  File "D:\Users\Administrator\anaconda3\envs\simple\lib\site-packages\requests\models.py", line 980, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2025-12-31 23:49:18,804 | INFO | 开始抓取得物鞋子数据...
+2026-01-01 00:02:05,185 | INFO | 开始抓取得物鞋子数据...
+2026-01-01 00:02:06,003 | ERROR | 第1页出错：Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "D:\Users\Administrator\anaconda3\envs\simple\lib\site-packages\requests\models.py", line 976, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "D:\Users\Administrator\anaconda3\envs\simple\lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "D:\Users\Administrator\anaconda3\envs\simple\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "D:\Users\Administrator\anaconda3\envs\simple\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "G:\新建文件夹\pythonAdvanced\接单\爬取得物鞋子详情页信息.py", line 131, in main
+    items = search_shoes(page)        # 拿到当前页 40 条
+  File "G:\新建文件夹\pythonAdvanced\接单\爬取得物鞋子详情页信息.py", line 81, in search_shoes
+    data = resp.json()                                       # 转 JSON
+  File "D:\Users\Administrator\anaconda3\envs\simple\lib\site-packages\requests\models.py", line 980, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2026-01-01 00:02:15,368 | ERROR | 第2页出错：Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "D:\Users\Administrator\anaconda3\envs\simple\lib\site-packages\requests\models.py", line 976, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "D:\Users\Administrator\anaconda3\envs\simple\lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "D:\Users\Administrator\anaconda3\envs\simple\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "D:\Users\Administrator\anaconda3\envs\simple\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "G:\新建文件夹\pythonAdvanced\接单\爬取得物鞋子详情页信息.py", line 131, in main
+    items = search_shoes(page)        # 拿到当前页 40 条
+  File "G:\新建文件夹\pythonAdvanced\接单\爬取得物鞋子详情页信息.py", line 81, in search_shoes
+    data = resp.json()                                       # 转 JSON
+  File "D:\Users\Administrator\anaconda3\envs\simple\lib\site-packages\requests\models.py", line 980, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2026-01-01 00:02:22,751 | ERROR | 第3页出错：Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "D:\Users\Administrator\anaconda3\envs\simple\lib\site-packages\requests\models.py", line 976, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "D:\Users\Administrator\anaconda3\envs\simple\lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "D:\Users\Administrator\anaconda3\envs\simple\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "D:\Users\Administrator\anaconda3\envs\simple\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "G:\新建文件夹\pythonAdvanced\接单\爬取得物鞋子详情页信息.py", line 131, in main
+    items = search_shoes(page)        # 拿到当前页 40 条
+  File "G:\新建文件夹\pythonAdvanced\接单\爬取得物鞋子详情页信息.py", line 81, in search_shoes
+    data = resp.json()                                       # 转 JSON
+  File "D:\Users\Administrator\anaconda3\envs\simple\lib\site-packages\requests\models.py", line 980, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2026-01-01 00:02:32,188 | ERROR | 第4页出错：Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "D:\Users\Administrator\anaconda3\envs\simple\lib\site-packages\requests\models.py", line 976, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "D:\Users\Administrator\anaconda3\envs\simple\lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "D:\Users\Administrator\anaconda3\envs\simple\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "D:\Users\Administrator\anaconda3\envs\simple\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "G:\新建文件夹\pythonAdvanced\接单\爬取得物鞋子详情页信息.py", line 131, in main
+    items = search_shoes(page)        # 拿到当前页 40 条
+  File "G:\新建文件夹\pythonAdvanced\接单\爬取得物鞋子详情页信息.py", line 81, in search_shoes
+    data = resp.json()                                       # 转 JSON
+  File "D:\Users\Administrator\anaconda3\envs\simple\lib\site-packages\requests\models.py", line 980, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2026-01-01 00:02:39,069 | ERROR | 第5页出错：Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "D:\Users\Administrator\anaconda3\envs\simple\lib\site-packages\requests\models.py", line 976, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "D:\Users\Administrator\anaconda3\envs\simple\lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "D:\Users\Administrator\anaconda3\envs\simple\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "D:\Users\Administrator\anaconda3\envs\simple\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "G:\新建文件夹\pythonAdvanced\接单\爬取得物鞋子详情页信息.py", line 131, in main
+    items = search_shoes(page)        # 拿到当前页 40 条
+  File "G:\新建文件夹\pythonAdvanced\接单\爬取得物鞋子详情页信息.py", line 81, in search_shoes
+    data = resp.json()                                       # 转 JSON
+  File "D:\Users\Administrator\anaconda3\envs\simple\lib\site-packages\requests\models.py", line 980, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2026-01-01 00:02:46,771 | ERROR | 第6页出错：Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "D:\Users\Administrator\anaconda3\envs\simple\lib\site-packages\requests\models.py", line 976, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "D:\Users\Administrator\anaconda3\envs\simple\lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "D:\Users\Administrator\anaconda3\envs\simple\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "D:\Users\Administrator\anaconda3\envs\simple\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "G:\新建文件夹\pythonAdvanced\接单\爬取得物鞋子详情页信息.py", line 131, in main
+    items = search_shoes(page)        # 拿到当前页 40 条
+  File "G:\新建文件夹\pythonAdvanced\接单\爬取得物鞋子详情页信息.py", line 81, in search_shoes
+    data = resp.json()                                       # 转 JSON
+  File "D:\Users\Administrator\anaconda3\envs\simple\lib\site-packages\requests\models.py", line 980, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2026-01-01 00:02:53,980 | ERROR | 第7页出错：Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "D:\Users\Administrator\anaconda3\envs\simple\lib\site-packages\requests\models.py", line 976, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "D:\Users\Administrator\anaconda3\envs\simple\lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "D:\Users\Administrator\anaconda3\envs\simple\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "D:\Users\Administrator\anaconda3\envs\simple\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "G:\新建文件夹\pythonAdvanced\接单\爬取得物鞋子详情页信息.py", line 131, in main
+    items = search_shoes(page)        # 拿到当前页 40 条
+  File "G:\新建文件夹\pythonAdvanced\接单\爬取得物鞋子详情页信息.py", line 81, in search_shoes
+    data = resp.json()                                       # 转 JSON
+  File "D:\Users\Administrator\anaconda3\envs\simple\lib\site-packages\requests\models.py", line 980, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2026-01-01 00:02:59,123 | ERROR | 第8页出错：Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "D:\Users\Administrator\anaconda3\envs\simple\lib\site-packages\requests\models.py", line 976, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "D:\Users\Administrator\anaconda3\envs\simple\lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "D:\Users\Administrator\anaconda3\envs\simple\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "D:\Users\Administrator\anaconda3\envs\simple\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "G:\新建文件夹\pythonAdvanced\接单\爬取得物鞋子详情页信息.py", line 131, in main
+    items = search_shoes(page)        # 拿到当前页 40 条
+  File "G:\新建文件夹\pythonAdvanced\接单\爬取得物鞋子详情页信息.py", line 81, in search_shoes
+    data = resp.json()                                       # 转 JSON
+  File "D:\Users\Administrator\anaconda3\envs\simple\lib\site-packages\requests\models.py", line 980, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2026-01-01 00:03:06,129 | ERROR | 第9页出错：Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "D:\Users\Administrator\anaconda3\envs\simple\lib\site-packages\requests\models.py", line 976, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "D:\Users\Administrator\anaconda3\envs\simple\lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "D:\Users\Administrator\anaconda3\envs\simple\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "D:\Users\Administrator\anaconda3\envs\simple\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "G:\新建文件夹\pythonAdvanced\接单\爬取得物鞋子详情页信息.py", line 131, in main
+    items = search_shoes(page)        # 拿到当前页 40 条
+  File "G:\新建文件夹\pythonAdvanced\接单\爬取得物鞋子详情页信息.py", line 81, in search_shoes
+    data = resp.json()                                       # 转 JSON
+  File "D:\Users\Administrator\anaconda3\envs\simple\lib\site-packages\requests\models.py", line 980, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2026-01-01 00:03:15,842 | ERROR | 第10页出错：Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "D:\Users\Administrator\anaconda3\envs\simple\lib\site-packages\requests\models.py", line 976, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "D:\Users\Administrator\anaconda3\envs\simple\lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "D:\Users\Administrator\anaconda3\envs\simple\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "D:\Users\Administrator\anaconda3\envs\simple\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "G:\新建文件夹\pythonAdvanced\接单\爬取得物鞋子详情页信息.py", line 131, in main
+    items = search_shoes(page)        # 拿到当前页 40 条
+  File "G:\新建文件夹\pythonAdvanced\接单\爬取得物鞋子详情页信息.py", line 81, in search_shoes
+    data = resp.json()                                       # 转 JSON
+  File "D:\Users\Administrator\anaconda3\envs\simple\lib\site-packages\requests\models.py", line 980, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2026-01-01 00:03:21,731 | INFO | 全部完成！已抓 0 双鞋，见 dewu_shoes.csv
