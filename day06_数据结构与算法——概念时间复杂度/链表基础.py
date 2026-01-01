@@ -21,8 +21,10 @@ class singlelinklist():
         self.tail = None
         # 当前索引要插入位置对应的元素
         self.pos_item = None
-        # 当前索引要插入位置建一个节点对应的元素
+        # 当前索引要插入位置前一个节点对应的元素
         self.previous_pos_item = None
+        # 列表长度
+        self.length = 0
 
     def isEmpty(self):
         '''
@@ -99,6 +101,7 @@ class singlelinklist():
                 self.tail = last_item
             self.tail.next = node
             self.tail = node
+        self.length += 1
 
     def _add_head_one(self, data):
         new_node = SingleNode(data)
@@ -111,20 +114,21 @@ class singlelinklist():
             self.head = new_node
             # 新节点的next节点指向以前的head节点
             new_node.next = cur
+        self.length += 1
 
-    def add_item_to_head(self, *args):
-        for arg in args[0]:
-            new_node = SingleNode(arg)
-            if self.isEmpty():
-                self.head = new_node
-            else:
-                # 获取当前head的节点
-                cur = self.head
-                # 将head的新节点设置为新节点
-                self.head = new_node
-                # 新节点的next节点指向以前的head节点
-                new_node.next = cur
-        print('所有元素添加完毕')
+    # def add_item_to_head(self, *args):
+    #     for arg in args[0]:
+    #         new_node = SingleNode(arg)
+    #         if self.isEmpty():
+    #             self.head = new_node
+    #         else:
+    #             # 获取当前head的节点
+    #             cur = self.head
+    #             # 将head的新节点设置为新节点
+    #             self.head = new_node
+    #             # 新节点的next节点指向以前的head节点
+    #             new_node.next = cur
+    #     print('所有元素添加完毕')
 
     def _insert_one_by_index(self, data, pos):
         length = self.getListLength()
@@ -167,6 +171,59 @@ class singlelinklist():
                 print(cur.item)
                 cur = cur.next
 
+    #   按照指定的数据进行删除
+    def del_by_data(self, *args):
+        for arg in args:
+            if isinstance(arg, Iterable) and not isinstance(arg, (str, bytes)):
+                for data in arg:
+                    self.del_one_by_data(data)
+            else:
+                self.del_one_by_data(arg)
+
+    def del_one_by_data(self, data):
+        # 当前节点
+        cur = self.head
+        # 前一个节点
+        pre = None
+        count = 0
+        while cur is not None:
+            if cur.item == data:
+                if pre is None:
+                    self.head = cur.next
+                    if self.length == 1:
+                        self.tail = None
+                    self.length -= 1
+                    # 因为我这个是列表，删除一个之后不可以退出方法
+                    # return
+                else:
+                    # 将前一个节点的next指向 cur的下一个节点，当前节点cur就从列表中删除
+                    pre.next = cur.next
+                    # 如果删除的节点是最后一个节点
+                    if cur.next is  None:
+                        self.tail = pre
+                    elif self.length == 1:
+                        self.tail = None
+                    self.length -= 1
+                    # 因为我这个是列表，删除一个之后不可以退出方法
+                    # return
+            # 走入这个逻辑，说明没找到要删除的节点，那么需要将当前的节点更新为前一个节点，将下一个节点更新为当前节点
+            pre = cur
+            cur = cur.next
+
+
+    '''
+    查找和遍历类似，只需按照链表next指针访问，直到找到匹配的数据节点
+    '''
+
+    def search(self, data):
+        cur = self.head
+        while cur is not None:
+            if cur.item == data:
+                return True
+            # 没找到则更新cur节点为下一个节点
+            cur = cur.next
+        return False
+
 
 if __name__ == '__main__':
     single_list = singlelinklist()
@@ -181,7 +238,15 @@ if __name__ == '__main__':
     print('==' * 34)
     single_list.append([e for e in range(500, 600)], [e for e in range(600, 700)], flag=2, pos=100)
     single_list.append(701, flag=2, pos=100)
+    # single_list.getlist()
+    print('==' * 34)
+    # 删除指定的数据
+    single_list.del_by_data([99, 701, 500, 501, 502, 503, 504, 505, 506, 507])
+    single_list.del_by_data(508)
     single_list.getlist()
+    print('==' * 34)
+    print(single_list.search(508))
+    print(single_list.search(509))
     print('==' * 34)
     is_empty = single_list.isEmpty()
     print(is_empty)
