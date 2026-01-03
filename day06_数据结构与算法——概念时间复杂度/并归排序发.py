@@ -9,7 +9,7 @@
 最坏/平均/最好时间复杂度：O(nlogn)
 空间复杂度：O(n)
 """
-
+#排序前: [38, 27, 43, 3, 9, 82, 10]
 def merge_sort(arr):
     if len(arr) <= 1:
         return arr

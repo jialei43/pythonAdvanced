@@ -24,7 +24,7 @@ logging.basicConfig(
 
 connent = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
-connent.connect(('127.0.0.1', 8080))
+connent.connect(('192.168.32.162', 8080))
 try:
     while True:
         data = input('请输入你要传入的信息(输入y退出)：')
