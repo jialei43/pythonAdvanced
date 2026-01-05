@@ -493,7 +493,21 @@ df2 = df2.assign(
     new_6=np.random.randint(0, 100, size=df2.shape[0])
 )
 print(df2.head())
+print("==" * 34)
 
 # 删除与去重
+print(df3.head())
+print("==" * 34)
+
+df3.drop([0]) # 默认删除行
+print(df3.head())
+print("==" * 34)
+
+df3.drop([0, 2, 4]) # 可以删除多行
+print(df3.head())
+
+
 # 直接在df3上修改不返回新的对象 ,axis=1 表示删除列
 # df3.drop('new_2', axis=1, inplace=True)
+
+
